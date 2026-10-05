@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Zee",
+    "slug": "zee",
+    "version": "0.8.1",
+    "scheme": "zee",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0F0F14",
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-secure-store",
+      "expo-notifications",
+      [
+        "expo-share-intent",
+        {
+          "androidIntentFilters": [
+            "text/*",
+            "image/*",
+            "application/pdf"
+          ]
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "imageWidth": 200,
+          "backgroundColor": "#0F0F14"
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Zee records voice notes only when you tap record."
+        }
+      ],
+      "./plugins/withShortcuts"
+    ],
+    "android": {
+      "package": "com.zee.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-foreground.png",
+        "backgroundColor": "#0F0F14"
+      }
+    },
+    "experiments": {
+      "typedRoutes": false
+    },
+    "ios": {
+      "bundleIdentifier": "com.zee.app"
+    },
+    "icon": "./assets/icon.png"
+  }
+}
